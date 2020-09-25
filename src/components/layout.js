@@ -80,7 +80,7 @@ const Layout = ({ location, title, children }) => {
 			// backgroundColor: darkModeEnabled ? 'rgba(44,47,51)' : '#FFFFFF',
 			// color: darkModeEnabled ? 'rgba(256, 256, 256, 87%)' : 'rgba(0, 0, 0, 87%)',
 			overflowY: 'scroll'
-		}} className={ darkModeEnabled ? 'dark' : 'light' }>
+		}} className={ darkModeEnabled ? 'dark' : '' }>
 			<div style = {{
 				marginLeft: `auto`,
 				marginRight: `auto`,

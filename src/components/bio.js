@@ -37,7 +37,7 @@ const Bio = () => {
 	return (
 		<div style={{
 			display: `flex`,
-			marginBottom: rhythm(2.5),
+			alignItems: 'flex-start'
 		}}>
 			<Image fixed={data.avatar.childImageSharp.fixed}
 				alt={author.name}
@@ -46,7 +46,7 @@ const Bio = () => {
 					marginBottom: 0,
 					minWidth: 50,
 					borderRadius: `100%`,
-					}}
+				}}
 				imgStyle={{
 					borderRadius: `50%`,
 				}}/>

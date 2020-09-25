@@ -1,6 +1,33 @@
+body {
+    --text-header-color: #343a40;
+    --text-color: #b3b9c5;
+    --text-color-dark: #222629;
+    --text-darkmode-color: rgba(256, 256, 256, 87%);
+    --text-darkmode-header-color: #ff9f87;
+    --darkmode-background-color: rgba(44, 47, 51);
+}
+
+h1,
+h2,
+h4,
+h5,
+h6 {
+    color: var(--text-header-color);
+}
+
+h3 {
+    color: var(--text-color-dark);
+    border-bottom: 1px solid var(--text-color-dark);
+    padding-bottom: 5px;
+}
+
+h3 a {
+    color: var(--text-color-dark);
+}
+
 .dark {
-    color: rgba(256, 256, 256, 87%);
-    background-color: rgba(44, 47, 51);
+    color: var(--text-darkmode-color);
+    background-color: var(--darkmode-background-color);
 }
 
 .dark h1,
@@ -9,19 +36,19 @@
 .dark h4,
 .dark h5,
 .dark h6 {
-    color: rgba(114, 137, 218);
+    color: var(--text-darkmode-header-color);
+}
+
+.dark h3 {
+    border-bottom: 1px solid var(--text-darkmode-header-color);
+    padding-bottom: 5px;
 }
 
 .dark a {
-    color: red;
+    color: var(--text-darkmode-header-color);
 }
 
 .dark blockquote {
-    color: pink;
-    border-left-color: hotpink;
-}
-
-.light {
-    color: rgba(0, 0, 0, 87%);
-    background-color: #FFF;
+    color: var(--text-darkmode-header-color);
+    border-left-color: var(--text-darkmode-header-color);
 }
