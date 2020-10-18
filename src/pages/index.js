@@ -6,6 +6,8 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
 
+import Emoji from '../components/emoji'
+
 const BlogIndex = ({ data, location }) => {
 	const siteTitle = data.site.siteMetadata.title
 	const posts = data.allMarkdownRemark.edges
@@ -28,7 +30,7 @@ const BlogIndex = ({ data, location }) => {
 										{title}
 									</Link>
 								</h3>
-								<small>{node.frontmatter.date}</small>
+								<small>{node.frontmatter.date} | <Emoji symbol='⏱️'></Emoji>{node.fields.readingTime.text}</small>
 							</header>
 							<section>
 								<p dangerouslySetInnerHTML={{ __html: node.frontmatter.description || node.excerpt, }} />
@@ -56,6 +58,10 @@ query {
 				excerpt
 				fields {
 					slug
+					readingTime {
+						text
+						minutes
+					}
 				}
 				frontmatter {
 					date(formatString: "MMMM DD, YYYY")

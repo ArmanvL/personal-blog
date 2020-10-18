@@ -1,5 +1,6 @@
 body {
-    --text-header-color: #343a40;
+    --text-header-color-dark: #343a40;
+    --text-header-color-coloured: #ff6b86;
     --text-color: #b3b9c5;
     --text-color-dark: #222629;
     --text-darkmode-color: rgba(256, 256, 256, 87%);
@@ -12,17 +13,16 @@ h2,
 h4,
 h5,
 h6 {
-    color: var(--text-header-color);
+    color: var(--text-header-color-dark);
 }
 
 h3 {
-    color: var(--text-color-dark);
-    border-bottom: 1px solid var(--text-color-dark);
-    padding-bottom: 5px;
+    /* padding-bottom: 5px; */
 }
 
 h3 a {
-    color: var(--text-color-dark);
+    /* color: var(--text-color-dark); */
+    color: #6c9058;
 }
 
 .dark {
@@ -40,12 +40,12 @@ h3 a {
 }
 
 .dark h3 {
-    border-bottom: 1px solid var(--text-darkmode-header-color);
     padding-bottom: 5px;
 }
 
 .dark a {
-    color: var(--text-darkmode-header-color);
+    /* color: var(--text-darkmode-header-color); */
+    color: #cebb9e;
 }
 
 .dark blockquote {
