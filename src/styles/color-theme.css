@@ -1,11 +1,14 @@
 body {
-    --text-header-color-dark: #343a40;
-    --text-header-color-coloured: #ff6b86;
-    --text-color: #b3b9c5;
-    --text-color-dark: #222629;
-    --text-darkmode-color: rgba(256, 256, 256, 87%);
-    --text-darkmode-header-color: #ff9f87;
-    --darkmode-background-color: rgba(44, 47, 51);
+    --text-header-dark: #343a40;
+    --text-header-coloured: #68a048;
+    --text-header-coloured-lightened: #86bb67;
+    --text-header-coloured-darkened: #518931;
+    --darkmode-background-color: #262b37;
+    --darkmode-text-color: rgba(256, 256, 256, 87%);
+    --darkmode-text-header-light: #FFFFFF;
+    --darkmode-text-header-coloured: #68a048;
+    --darkmode-text-header-coloured-lightened: #86bb67;
+    --darkmode-text-header-coloured-darkened: #518931;
 }
 
 h1,
@@ -13,42 +16,56 @@ h2,
 h4,
 h5,
 h6 {
-    color: var(--text-header-color-dark);
+    color: var(--text-header-dark);
 }
 
 h3 {
-    /* padding-bottom: 5px; */
+    padding-bottom: 5px;
+}
+
+a {
+    color: var(--text-header-coloured-darkened);
 }
 
 h3 a {
-    /* color: var(--text-color-dark); */
-    color: #6c9058;
+    color: var(--text-header-coloured);
+}
+
+.article a {
+    color: var(--text-header-coloured-lightened) !important;
+}
+
+blockquote {
+    color: var(--text-header-coloured);
+    border-left-color: var(--text-header-coloured);
 }
 
 .dark {
-    color: var(--text-darkmode-color);
     background-color: var(--darkmode-background-color);
+    color: var(--darkmode-text-color);
 }
 
 .dark h1,
 .dark h2,
-.dark h3,
 .dark h4,
 .dark h5,
 .dark h6 {
-    color: var(--text-darkmode-header-color);
-}
-
-.dark h3 {
-    padding-bottom: 5px;
+    color: var(--darkmode-text-header-light);
 }
 
 .dark a {
-    /* color: var(--text-darkmode-header-color); */
-    color: #cebb9e;
+    color: var(--text-header-coloured-darkened);
+}
+
+.dark h3 a {
+    color: var(--darkmode-text-header-coloured-lightened);
+}
+
+.dark a {
+    color: var(--darkmode-text-header-coloured-darkened);
 }
 
 .dark blockquote {
-    color: var(--text-darkmode-header-color);
-    border-left-color: var(--text-darkmode-header-color);
+    color: var(--darkmode-text-header-coloured);
+    border-left-color: var(--darkmode-text-header-coloured);
 }
