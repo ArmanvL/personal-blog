@@ -31,12 +31,20 @@ const Layout = ({ location, title, children }) => {
 
 	const rootPath = `${__PATH_PREFIX__}/`
 	let header
+	let prefersDarkScheme
+	let darkmodeStoredValue = false
 	
 	// Initialise dark mode for the application
-	const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)")
+	if (typeof window !== 'undefined') {
+		prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)")
+	}
+
+	if (typeof localStorage !== 'undefined') {
+		darkmodeStoredValue = localStorage.getItem('darkModeEnabled') !== null && localStorage.getItem('darkModeEnabled') === 'true'
+	}
+
 	const [ darkModeEnabled, setDarkModeEnabled ] = useState(
-		(localStorage.getItem('darkModeEnabled') !== null && localStorage.getItem('darkModeEnabled') === 'true') ||
-		( prefersDarkScheme.matches ? true : false )
+		( darkmodeStoredValue || ( prefersDarkScheme && prefersDarkScheme.matches ? true : false ) )
 	)
 
 	useEffect(() => {
