@@ -3,7 +3,7 @@ module.exports = {
     title: `Arman van Lieshout`,
     author: {
       name: `Arman van Lieshout`,
-      summary: `who wants to write something interesting about himself here.`,
+      summary: `work in progress!`,
     },
     description: `A personal blog built on top of Gatsby's starter-blog project`,
     siteUrl: `https://gatsby-starter-blog-demo.netlify.app/`,
